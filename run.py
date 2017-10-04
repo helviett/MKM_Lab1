@@ -1,5 +1,6 @@
 import os
 import re
+import platform
 
 files = os.listdir('ui') 
 print('----------------Start----------------')
@@ -15,7 +16,10 @@ fincludes.close()
 for file in files:
 	print('----' + file + ':')
 	newfile = file.replace(".ui", ' ')
-	bashCommand = 'python compiler.py ' + newfile
+	if platform.system() == 'Windows':
+		bashCommand = 'python compiler.py ' + newfile
+	else:
+		bashCommand = 'python3 compiler.py ' + newfile
 	os.system(bashCommand)
 
 print('---------------Finish----------------')
