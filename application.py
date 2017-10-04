@@ -3,13 +3,13 @@
 
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QDialog, QMainWindow
-from GenCode.MainWindow import *
+from GenCode.MainView import *
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
 
     mainView = QMainWindow()
-    ui = Ui_MainWindow()
+    ui = Ui_MainView()
     ui.setupUi(mainView)
 
     mainView.show()

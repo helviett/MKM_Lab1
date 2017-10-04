@@ -1,10 +1,11 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QDialog, QMainWindow
+from GenCode.FirstTaskView import *
 from GenCode.Test import *
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'ui/MainView.ui'
 #
-# Created by: PyQt5 UI code generator 5.9
+# Created by: PyQt5 UI code generator 5.6
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -38,7 +39,7 @@ class Ui_MainView(object):
         self.retranslateUi(MainView)
         QtCore.QMetaObject.connectSlotsByName(MainView)
 
-        self.initialize(MainWindow)
+        self.initialize(MainView)
 
     def retranslateUi(self, MainView):
         _translate = QtCore.QCoreApplication.translate
@@ -53,7 +54,7 @@ class Ui_MainView(object):
     
     def onClick(self, parent):
         new_window = QMainWindow(parent)
-        ui = Ui_Test()
+        ui = Ui_FirstTaskView()
         ui.setupUi(new_window)
         new_window.setWindowTitle("New form")
         new_window.show()

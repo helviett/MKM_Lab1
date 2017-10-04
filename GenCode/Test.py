@@ -1,10 +1,11 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QDialog, QMainWindow
+from GenCode.FirstTaskView import *
 from GenCode.MainView import *
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'ui/Test.ui'
 #
-# Created by: PyQt5 UI code generator 5.9
+# Created by: PyQt5 UI code generator 5.6
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -34,7 +35,7 @@ class Ui_Test(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-        self.initialize(MainWindow)
+        self.initialize(Test)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate

@@ -22,7 +22,7 @@ flag = False
 for line in fin:
 	if (line.find('def setupUi') > 0): flag = True
 	elif (flag and line.find('def ') > 0):
-		fout.write('        self.initialize(MainWindow)\n\n')
+		fout.write('        self.initialize(' + obj + ')\n\n')
 		flag = False
 	
 	fout.write(line)
