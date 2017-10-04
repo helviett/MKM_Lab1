@@ -3,12 +3,12 @@ import os
 
 obj = sys.argv[1]
 
-bashCommand = 'pyuic5 ui/' + obj + '.ui -o Windows/' + obj + '.py'
+bashCommand = 'pyuic5 ui/' + obj + '.ui -o Views/' + obj + '.py'
 os.system(bashCommand)
-print('--------Windows/'+ obj + '.py was created')
+print('--------Views/'+ obj + '.py was created')
 
 fcode = open('FormsCode/' + obj + '.py')
-fin = open('Windows/' + obj + '.py')
+fin = open('Views/' + obj + '.py')
 fout = open('GenCode/' + obj + '.py', 'w')
 fincludes = open('includes.txt')
 

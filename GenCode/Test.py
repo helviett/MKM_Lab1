@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QDialog, QMainWindow
-from GenCode.MainWindow import *
+from GenCode.MainView import *
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'ui/Test.ui'

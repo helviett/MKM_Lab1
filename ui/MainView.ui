@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>MainView</class>
+ <widget class="QMainWindow" name="MainView">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="TaskLabel">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -27,7 +27,7 @@
      <string>Выбор задания</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="TaskComboBox">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -42,7 +42,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="ChooseBtn">
     <property name="geometry">
      <rect>
       <x>350</x>

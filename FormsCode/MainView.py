@@ -1,6 +1,6 @@
 def initialize(self, mainForm):
     print('created', ' ', self)
-    self.pushButton.clicked.connect(lambda: self.onClick(mainForm))
+    self.ChooseBtn.clicked.connect(lambda: self.onClick(mainForm))
 
 def onClick(self, parent):
     new_window = QMainWindow(parent)
