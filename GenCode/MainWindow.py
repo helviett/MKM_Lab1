@@ -1,3 +1,5 @@
+from PyQt5.QtWidgets import QApplication, QWidget, QDialog, QMainWindow
+from GenCode.Test import *
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'ui/MainWindow.ui'
@@ -36,6 +38,8 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+        self.initialize(MainWindow)
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -43,3 +47,13 @@ class Ui_MainWindow(object):
         self.comboBox.setItemText(0, _translate("MainWindow", "Задание N1"))
         self.pushButton.setText(_translate("MainWindow", "Выбрать"))
 
+    def initialize(self, mainForm):
+        print('created', ' ', self)
+        self.pushButton.clicked.connect(lambda: self.onClick(mainForm))
+    
+    def onClick(self, parent):
+        new_window = QMainWindow(parent)
+        ui = Ui_Test()
+        ui.setupUi(new_window)
+        new_window.setWindowTitle("New form")
+        new_window.show()

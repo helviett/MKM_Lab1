@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
+
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QDialog, QMainWindow
-from views.MainView import Ui_MainWindow
+from GenCode.MainWindow import *
 
 if __name__ == '__main__':
-    
     app = QApplication(sys.argv)
 
     mainView = QMainWindow()
@@ -13,5 +13,5 @@ if __name__ == '__main__':
     ui.setupUi(mainView)
 
     mainView.show()
-    
+
     sys.exit(app.exec_())
