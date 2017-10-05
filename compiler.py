@@ -18,6 +18,12 @@ for module in (line.rstrip() for line in fincludes.readlines()):
 	if (module != obj):
 		fout.write('from GenCode.' + module + ' import ' + '*\n')
 
+
+files = os.listdir('ViewModels') 
+for file in files:
+	newfile = file.replace(".py", ' ')
+	fout.write('from ViewModels.' + newfile + ' import ' + '*\n')
+
 flag = False
 for line in fin:
 	if (line.find('def setupUi') > 0): flag = True
