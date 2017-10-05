@@ -12,7 +12,21 @@ def onClick(self, parent):
     f = self.FEdit.toPlainText()
     n = self.NEdit.toPlainText()
     r = self.REdit.toPlainText()
+
     isAnalyticMethod = self.AnalyticBox.checkState()
     isEulerMethod = self.EulerBox.checkState()
     isRungeMethod = self.RungeBox.checkState()
     isIEulerMethod = self.IEulerBox.checkState()
+
+    isTable = self.inTableCheckBox.checkState()
+    isGraphic = self.GraphicCheckBox.checkState()
+
+    if (isTable == 2):
+        new_window = QMainWindow(parent)
+        ui = Ui_TableForm()
+        ui.setupUi(new_window)
+        new_window.setWindowTitle("Output table")
+        new_window.show()
+
+    if (isGraphic == 2):
+        print('функция рисования графика')

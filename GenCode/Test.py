@@ -1,6 +1,9 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QDialog, QMainWindow
 from GenCode.FirstTaskView import *
 from GenCode.MainView import *
+from GenCode.TableForm import *
+from ViewModels.MainViewModel  import *
+from ViewModels.__pycache__ import *
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'ui/Test.ui'

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>496</width>
-    <height>310</height>
+    <width>501</width>
+    <height>319</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>230</y>
+      <y>240</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -31,7 +31,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>50</y>
+      <y>20</y>
       <width>411</width>
       <height>61</height>
      </rect>
@@ -44,9 +44,6 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="QTextEdit" name="TEdit"/>
-     </item>
      <item row="1" column="0">
       <widget class="QLabel" name="Flabel">
        <property name="text">
@@ -54,21 +51,14 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
-      <widget class="QTextEdit" name="FEdit"/>
-     </item>
-     <item row="1" column="4">
-      <widget class="QTextEdit" name="NEdit"/>
+     <item row="0" column="1">
+      <widget class="QTextEdit" name="TEdit"/>
      </item>
      <item row="0" column="4">
       <widget class="QTextEdit" name="REdit"/>
      </item>
-     <item row="0" column="2" colspan="2">
-      <widget class="QLabel" name="Rlabel">
-       <property name="text">
-        <string>r = </string>
-       </property>
-      </widget>
+     <item row="1" column="1">
+      <widget class="QTextEdit" name="FEdit"/>
      </item>
      <item row="1" column="2" colspan="2">
       <widget class="QLabel" name="Nlabel">
@@ -77,13 +67,23 @@
        </property>
       </widget>
      </item>
+     <item row="0" column="2" colspan="2">
+      <widget class="QLabel" name="Rlabel">
+       <property name="text">
+        <string>r = </string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="4">
+      <widget class="QTextEdit" name="NEdit"/>
+     </item>
     </layout>
    </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>140</y>
+      <y>110</y>
       <width>412</width>
       <height>49</height>
      </rect>
@@ -119,13 +119,39 @@
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>190</y>
+      <width>341</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <widget class="QCheckBox" name="inTableCheckBox">
+       <property name="text">
+        <string>Вывсти в таблицу</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QCheckBox" name="GraphicCheckBox">
+       <property name="text">
+        <string>Вывести график</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>496</width>
+     <width>501</width>
      <height>26</height>
     </rect>
    </property>

@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from math import exp
 import getopt
+import sys
 try:
 	opts, args = getopt.getopt(sys.argv[1:], "hf:e:", ["help", "file=", "expression="])
 except getopt.GetoptError as err:
