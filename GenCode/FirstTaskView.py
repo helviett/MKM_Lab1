@@ -1,14 +1,14 @@
 from PyQt5.QtWidgets import *
 from GenCode.MainView import *
-from GenCode.TableForm import *
 from GenCode.Test import *
+from GenCode.TableForm import *
 from ViewModels.FirstTaskViewModel  import *
 from ViewModels.__pycache__ import *
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'ui/FirstTaskView.ui'
 #
-# Created by: PyQt5 UI code generator 5.6
+# Created by: PyQt5 UI code generator 5.9
 #
 # WARNING! All changes made in this file will be lost!
 

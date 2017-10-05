@@ -1,14 +1,14 @@
 from PyQt5.QtWidgets import *
-from GenCode.FirstTaskView import *
 from GenCode.MainView import *
 from GenCode.Test import *
+from GenCode.FirstTaskView import *
 from ViewModels.FirstTaskViewModel  import *
 from ViewModels.__pycache__ import *
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'ui/TableForm.ui'
 #
-# Created by: PyQt5 UI code generator 5.6
+# Created by: PyQt5 UI code generator 5.9
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -54,6 +54,7 @@ class Ui_TableForm(object):
         self.SaveButton.clicked.connect(lambda: self.onClick(mainForm))
     
     def createTable(self, table):
+        self.table = table
         n = table.ColCount()
         m = table.RowCount()
         self.tableWidget.setColumnCount(table.ColCount())
@@ -67,6 +68,6 @@ class Ui_TableForm(object):
         self.tableWidget.resizeColumnsToContents()
     
     def onClick(self, parent):
-        filename = QFileDialog.getSaveFileName(parent, 'Save file', '/home')
+        filename = QFileDialog.getSaveFileName(parent, 'Save file', '', 'CSV(*.csv)')
         fout = open(list(filename)[0], 'w')
-        fout.write('Hellow world')
+        fout.write(str(self.table))

@@ -32,6 +32,13 @@ class Table():
 	def __getitem__(self, index):
 		return self.rows[index]
 
+	def __str__(self):
+		s = ", ".join(self.cols) + "\n"
+		for row in self.rows:
+			s += ", ".join(row) + "\n"
+		return s
+
+
 
 def AnaliticalSolution(x):
 	return exp(-2 * x) * 3 / 4 + x ** 2 / 2 - x / 2 + 1 / 4

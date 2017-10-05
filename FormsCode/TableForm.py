@@ -3,6 +3,7 @@ def initialize(self, mainForm):
     self.SaveButton.clicked.connect(lambda: self.onClick(mainForm))
 
 def createTable(self, table):
+    self.table = table
     n = table.ColCount()
     m = table.RowCount()
     self.tableWidget.setColumnCount(table.ColCount())
@@ -16,6 +17,6 @@ def createTable(self, table):
     self.tableWidget.resizeColumnsToContents()
 
 def onClick(self, parent):
-    filename = QFileDialog.getSaveFileName(parent, 'Save file', '/home')
+    filename = QFileDialog.getSaveFileName(parent, 'Save file', '', 'CSV(*.csv)')
     fout = open(list(filename)[0], 'w')
-    fout.write('Hellow world')
+    fout.write(str(self.table))
