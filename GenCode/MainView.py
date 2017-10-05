@@ -1,5 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QDialog, QMainWindow
-from PyQt5.QtWidgets import QTableWidget,QTableWidgetItem
+from PyQt5.QtWidgets import *
 from GenCode.FirstTaskView import *
 from GenCode.TableForm import *
 from GenCode.Test import *

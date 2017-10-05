@@ -21,6 +21,9 @@ class Ui_TableForm(object):
         self.tableWidget.setRowCount(0)
         self.tableWidget.horizontalHeader().setStretchLastSection(True)
         self.tableWidget.verticalHeader().setVisible(False)
+        self.SaveButton = QtWidgets.QPushButton(self.centralwidget)
+        self.SaveButton.setGeometry(QtCore.QRect(350, 520, 93, 28))
+        self.SaveButton.setObjectName("SaveButton")
         TableForm.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(TableForm)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
@@ -36,4 +39,5 @@ class Ui_TableForm(object):
     def retranslateUi(self, TableForm):
         _translate = QtCore.QCoreApplication.translate
         TableForm.setWindowTitle(_translate("TableForm", "MainWindow"))
+        self.SaveButton.setText(_translate("TableForm", "Сохранить"))
 

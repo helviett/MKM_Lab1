@@ -1,5 +1,6 @@
 def initialize(self, mainForm):
     print('created', ' ', self)
+    self.SaveButton.clicked.connect(lambda: self.onClick(mainForm))
 
 def createTable(self, table):
     n = table.ColCount()
@@ -13,3 +14,8 @@ def createTable(self, table):
             self.tableWidget.setItem(i, j, QTableWidgetItem(table[i][j]))
 
     self.tableWidget.resizeColumnsToContents()
+
+def onClick(self, parent):
+    filename = QFileDialog.getSaveFileName(parent, 'Save file', '/home')
+    fout = open(list(filename)[0], 'w')
+    fout.write('Hellow world')

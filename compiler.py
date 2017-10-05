@@ -13,8 +13,7 @@ fout = open('GenCode/' + obj + '.py', 'w')
 fincludes = open('includes.txt')
 
 
-fout.write('from PyQt5.QtWidgets import QApplication, QWidget, QDialog, QMainWindow\n')
-fout.write('from PyQt5.QtWidgets import QTableWidget,QTableWidgetItem\n')
+fout.write('from PyQt5.QtWidgets import *\n')
 for module in (line.rstrip() for line in fincludes.readlines()):
 	if (module != obj):
 		fout.write('from GenCode.' + module + ' import ' + '*\n')

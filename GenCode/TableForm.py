@@ -1,5 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QDialog, QMainWindow
-from PyQt5.QtWidgets import QTableWidget,QTableWidgetItem
+from PyQt5.QtWidgets import *
 from GenCode.FirstTaskView import *
 from GenCode.MainView import *
 from GenCode.Test import *
@@ -28,6 +27,9 @@ class Ui_TableForm(object):
         self.tableWidget.setRowCount(0)
         self.tableWidget.horizontalHeader().setStretchLastSection(True)
         self.tableWidget.verticalHeader().setVisible(False)
+        self.SaveButton = QtWidgets.QPushButton(self.centralwidget)
+        self.SaveButton.setGeometry(QtCore.QRect(350, 520, 93, 28))
+        self.SaveButton.setObjectName("SaveButton")
         TableForm.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(TableForm)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
@@ -45,9 +47,11 @@ class Ui_TableForm(object):
     def retranslateUi(self, TableForm):
         _translate = QtCore.QCoreApplication.translate
         TableForm.setWindowTitle(_translate("TableForm", "MainWindow"))
+        self.SaveButton.setText(_translate("TableForm", "Сохранить"))
 
     def initialize(self, mainForm):
         print('created', ' ', self)
+        self.SaveButton.clicked.connect(lambda: self.onClick(mainForm))
     
     def createTable(self, table):
         n = table.ColCount()
@@ -61,3 +65,8 @@ class Ui_TableForm(object):
                 self.tableWidget.setItem(i, j, QTableWidgetItem(table[i][j]))
     
         self.tableWidget.resizeColumnsToContents()
+    
+    def onClick(self, parent):
+        filename = QFileDialog.getSaveFileName(parent, 'Save file', '/home')
+        fout = open(list(filename)[0], 'w')
+        fout.write('Hellow world')
