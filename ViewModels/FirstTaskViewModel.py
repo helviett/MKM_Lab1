@@ -14,7 +14,7 @@ class Table():
 		self.rows = []
 
 	def AddCols(self, cols):
-		self.cols = map(str, cols)
+		self.cols = list(map(str, cols))
 
 	def AddRow(self, row):
 		_row = map(str, row)
@@ -111,9 +111,10 @@ class FirstTaskViewModel():
 		if not analitical is None:
 			for mname in methodNames:
 				cols = cols + [mname, 'Delta']
-			cols = ['k', 't', 'Analitical']
+			cols = ['k', 't', 'Analitical'] + cols
 		else:
 			cols = ['k', 't'] + methodNames
+		t.AddCols(cols)
 		for i in range(len(xs)):
 			row  = [str(i + 1), str(xs[i])]
 			if not analitical is None:

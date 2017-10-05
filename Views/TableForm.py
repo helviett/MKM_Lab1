@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui/TableForm.ui'
 #
-# Created by: PyQt5 UI code generator 5.9
+# Created by: PyQt5 UI code generator 5.6
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -19,6 +19,8 @@ class Ui_TableForm(object):
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(0)
         self.tableWidget.setRowCount(0)
+        self.tableWidget.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget.verticalHeader().setVisible(False)
         TableForm.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(TableForm)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
