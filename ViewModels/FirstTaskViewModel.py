@@ -86,16 +86,19 @@ def CorrectedEulerMethod(y0, xs, f):
 class FirstTaskViewModel():
 
 	def __init__(self):
-		print("kek")
+		pass
 
 	def Plot(xs, yss, analitical, methodNames):
-		print('lol')
 		i = 1
-		rows = len(yss)
+		rows, cols = len(yss), 1
+		if not analitical is None:
+			cols = 2
 		plt.figure(tight_layout=True)
 		for j in range(len(yss)):
-			plt.subplot(rows, 1, i)
-			i += 1
+			plt.subplot(rows, cols, i)
+			i += 2
+			if analitical is None:
+				i -= 1
 			plt.xlabel('t')
 			plt.ylabel('T')
 			plt.grid(True)
@@ -103,6 +106,9 @@ class FirstTaskViewModel():
 			plt.plot(xs, yss[j], color='g')
 			if not analitical is None:
 				plt.plot(xs, analitical, color='b')
+				delta = [abs(yss[j][i] - analitical[i]) for i in range(len(analitical))]
+				plt.subplot(rows, cols, i - 1)
+				plt.plot(xs, delta)
 		if len(yss) == 0 and not analitical is None:
 			plt.xlabel('t')
 			plt.ylabel('T')
